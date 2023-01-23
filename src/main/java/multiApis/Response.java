@@ -9,19 +9,16 @@ import java.util.List;
 
 public class Response {
 
-	private List<String> docs;
+	
+	private Docs[] docs;
 
-	public List<String> getDocs() {
+	public Docs[] getDocs() {
 		return docs;
 	}
 
-	public void setDocs(List<String> docs) {
+	public void setDocs(Docs[] docs) {
 		this.docs = docs;
 	}
-	
 
-	
-	
-	
 	
 }

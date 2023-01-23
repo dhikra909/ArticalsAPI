@@ -2,6 +2,10 @@ package multiApis;
 
 public class Results {
 	private String source;
+	private String published_date;
+	private String section;
+	private String subsection;
+	
 	public String getSource() {
 		return source;
 	}
@@ -26,8 +30,6 @@ public class Results {
 	public void setSubsection(String subsection) {
 		this.subsection = subsection;
 	}
-	private String published_date;
-	private String section;
-	private String subsection;
+	
 	
 }

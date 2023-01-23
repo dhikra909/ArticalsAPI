@@ -14,6 +14,17 @@ import com.google.gson.JsonParser;
 public class author {
 
 	private String status;
+	private String copyright;
+	private boolean has_more;
+	private Integer num_results;
+	private Results1[] results;
+	
+	public Results1[] getResults() {
+		return results;
+	}
+	public void setResults(Results1[] results) {
+		this.results = results;
+	}
 	public String getStatus() {
 		return status;
 	}
@@ -38,33 +49,10 @@ public class author {
 	public void setNum_results(Integer num_results) {
 		this.num_results = num_results;
 	}
-	private String copyright;
-	private boolean has_more;
-	private Integer num_results;
-	
-	
-	public static void main(String[] args) throws IOException, InterruptedException {
-		String url = "jdbc:mysql://localhost:3306/my_Dataapi";
-		String user = "root";
-		String pass = "root";
-	    HttpClient client = HttpClient.newHttpClient();
-				HttpRequest request = HttpRequest.newBuilder()
-						.uri(URI.create("https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=ikkXtidGaU5HWtgVZXo02yaL4f3iyDe3")).build();
-			
-				HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-				String uglyJsonString = response.body();
-				Gson gson = new GsonBuilder().setPrettyPrinting().create();
-				JsonParser jp = new JsonParser();
-				JsonElement je = jp.parse(uglyJsonString);
-				String prettyJsonString = gson.toJson(je);
-				System.out.println(prettyJsonString);
+
 	
 	
 	
-	
-	
-	
-	}
 	
 	
 	
