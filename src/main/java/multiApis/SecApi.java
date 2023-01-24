@@ -16,7 +16,7 @@ import com.google.gson.JsonParser;
 
 public class SecApi {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void mainsec() throws IOException, InterruptedException {
 		String url = "jdbc:mysql://localhost:3306/my_Dataapi";
 		String user = "root";
 		String pass = "root";

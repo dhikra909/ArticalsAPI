@@ -15,7 +15,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
 public class artapi {
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void mainar() throws IOException, InterruptedException {
 		String url = "jdbc:mysql://localhost:3306/my_Dataapi";
 		String user = "root";
 		String pass = "root";
@@ -69,5 +69,9 @@ public class artapi {
 
 		}
 	}
+
+
+
+
 
 }
