@@ -14,7 +14,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-public class artapi {
+public class Artapi {
 	public static void mainar() throws IOException, InterruptedException {
 		String url = "jdbc:mysql://localhost:3306/my_Dataapi";
 		String user = "root";
@@ -31,17 +31,17 @@ public class artapi {
 		JsonElement je = jp.parse(uglyJsonString);
 		String prettyJsonString = gson.toJson(je);
 		System.out.println(prettyJsonString);
-		articles A = gson.fromJson(prettyJsonString, articles.class);
+		Articles a = gson.fromJson(prettyJsonString, Articles.class);
 
-		int x = A.getResults().length;
+		int x = a.getResults().length;
 		for (int i = 0; i < x; i++) {
-			String status = A.getStatus();
-			String copyright = A.getCopyright();
-			Integer num_results = A.getNum_results();
-			String section = A.getResults()[i].getSection();
-			String source = A.getResults()[i].getSource();
-			String subSection = A.getResults()[i].getSubsection();
-			String PublishedDate = A.getResults()[i].getPublished_date();
+			String status = a.getStatus();
+			String copyright = a.getCopyright();
+			Integer num_results = a.getNum_results();
+			String section = a.getResults()[i].getSection();
+			String source = a.getResults()[i].getSource();
+			String subSection = a.getResults()[i].getSubsection();
+			String PublishedDate = a.getResults()[i].getPublished_date();
 			String SQLqueryForInserting = "insert into articles(status,copyright, num_results,section,source,subsection,published_dateb)"
 					+ " values('" + status + "' ,'" + copyright + "'," + num_results + ", '" + section + "', '"
 					+ source + "', '" + subSection + "', '" + PublishedDate + "')";

@@ -14,7 +14,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-public class sections {
+public class Sections {
 
 	private Response response;
 	private String status;

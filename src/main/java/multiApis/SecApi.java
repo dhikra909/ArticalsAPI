@@ -33,11 +33,11 @@ public class SecApi {
 		String prettyJsonString = gson.toJson(je);
 		System.out.println(prettyJsonString);
 
-		sections A = gson.fromJson(prettyJsonString, sections.class);
+		Sections a = gson.fromJson(prettyJsonString, Sections.class);
 
 		for (int i = 0; i < uglyJsonString.length(); i++) {
-			String status = A.getStatus();
-			String copyright = A.getCopyright();
+			String status = a.getStatus();
+			String copyright = a.getCopyright();
 
 			String SQLqueryForInserting = "insert into sections(status,copyright)" + " values('" + status + "' ,'"
 					+ copyright + "')";

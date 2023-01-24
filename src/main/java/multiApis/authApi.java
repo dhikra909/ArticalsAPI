@@ -14,7 +14,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-public class authApi {
+public class AuthApi {
 
 	public static void mainath() throws IOException, InterruptedException {
 		String url = "jdbc:mysql://localhost:3306/my_Dataapi";
@@ -33,18 +33,18 @@ public class authApi {
 		String prettyJsonString = gson.toJson(je);
 		System.out.println(prettyJsonString);
 
-		author A = gson.fromJson(prettyJsonString, author.class);
-		int x = A.getResults().length;
-		for (int i = 0; i <x; i++) {
-			String status = A.getStatus();
-			String copyright = A.getCopyright();
-			boolean has_more = A.isHas_more();
-			Integer num_results = A.getNum_results();
-			String display_title = A.getResults()[i].getDisplay_title();
-			String mpaa_rating = A.getResults()[i].getMpaa_rating();
+		Author a = gson.fromJson(prettyJsonString, Author.class);
+		int x = a.getResults().length;
+		for (int i = 0; i < x; i++) {
+			String status = a.getStatus();
+			String copyright = a.getCopyright();
+			boolean has_more = a.isHas_more();
+			Integer num_results = a.getNum_results();
+			String display_title = a.getResults()[i].getDisplay_title();
+			String mpaa_rating = a.getResults()[i].getMpaa_rating();
 			String SQLqueryForInserting = "insert into author(status,copyright,has_more,num_results,display_title,mpaa_rating)"
 					+ " values('" + status + "' ,'" + copyright + "' ," + has_more + " ,'" + num_results + "' ,'"
-					+display_title+ "' ,'" + mpaa_rating + "')";
+					+ display_title + "' ,'" + mpaa_rating + "')";
 
 			System.out.println(SQLqueryForInserting);
 			Connection con = null;

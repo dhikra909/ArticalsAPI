@@ -11,17 +11,17 @@ public class MainApi {
 		System.out.println("1. Insert article");
 		System.out.println("2. Insert author");
 		System.out.println("3. Insert  section");
-
+//		System.out.println ("select article id ");
 		int select = sc.nextInt();
 
 		switch (select) {
 		case 1:
 
-			artapi art = new artapi();
+			Artapi art = new Artapi();
 			art.mainar();
 			break;
 		case 2:
-			authApi auth = new authApi();
+			AuthApi auth = new AuthApi();
 			auth.mainath();
 			break;
 		case 3:

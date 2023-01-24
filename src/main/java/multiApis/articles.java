@@ -15,7 +15,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
 
-public class articles {
+public class Articles {
 
 	private String status;
 	private String copyright;
