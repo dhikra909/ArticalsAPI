@@ -11,7 +11,8 @@ public class MainApi {
 		System.out.println("1. Insert article");
 		System.out.println("2. Insert author");
 		System.out.println("3. Insert  section");
-//		System.out.println ("select article id ");
+		System.out.println("4.select top 5 sections with the most articles");
+
 		int select = sc.nextInt();
 
 		switch (select) {
@@ -28,7 +29,10 @@ public class MainApi {
 			SecApi sec = new SecApi();
 			sec.mainsec();
 			break;
-
+		case 4:
+			Q top = new Q();
+			top.q1();
+			break;
 		}
 
 	}
